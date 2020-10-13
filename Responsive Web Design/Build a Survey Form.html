@@ -1,0 +1,151 @@
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html>
+
+<Header>
+<h1 id="title"> Game Model Purchase </h1>
+</header> 
+
+<Body> 
+<style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+
+body {
+  font-family: 'Poppins';
+  line-height: 1.4;
+  background-color: #D7DCDD;
+  width: 500px;
+  margin: auto; 
+}
+
+
+form {
+  background: rgb(199, 0, 57, 0.2);
+  padding: 2.5rem 2.5rem;
+  border-radius: 2rem;
+  width: 500px;
+  margin: auto; 
+}
+
+
+.form-inputs {
+  display: block; 
+  width: 90%;
+  height: 2rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+
+
+#dropdown {
+  display: block; 
+  width: 95.5%;
+  height: 2rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+
+.input-headings {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+
+.submit-button {
+  width: 95%;
+  padding: 0.75rem;
+  background: red;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#textarea {
+  width: 93%;
+}
+
+@media only screen and (max-width: 800px) 
+{
+  form {
+  width: 65%; 
+  height: auto;}
+}
+</style>
+<p id="description">
+ Fill details below to complete your All 3D model order
+</p>
+
+<form id="survey-form">
+
+<div class="input-headings">
+  
+  <label for="name" id="name-label"> Name </label>
+  <input id="name" type="text" name="name" placeholder="Vu Dang" class="form-inputs" required> </input>   
+<br>        
+  <label for="email" id="email-label"> Email </label>
+  <input id="email" type="email" name="email" placeholder="VuDang@tesla.com" class="form-inputs" required> </input>
+<br>
+  <label for="number" id="number-label"> Age </label>
+  <input id="number" type="number" name="number" min="18" max="100" placeholder="18" class="form-inputs" required> </input>
+<br>
+
+<label for="dropdown" id="model" style="width: 90vw;"> Select model </label>
+  <select id="dropdown">
+    <option value = "Model_S"> Man</option>
+    <option value = "Model_3"> Woman</option>
+    <option value = "Model_X"> Animal</option>
+    <option value = "Model_Y"> House</option>
+    <option value = "Cyber_Truck"> custom model</option>
+  </select>
+<br>
+<br>
+
+<label for="model_color" id="model_color"> <b>Model :</b> </label>
+<br>
+  <input id="model_color" type="radio" name="color" value="black">
+  <label for=""model_color"> With texture </label>
+<br>
+  <input id="model_color" type="radio" name="color" value="white">
+  <label for="model_color"> Without texture </label>
+<br>
+<br>
+<br>
+                           
+<label for="features"> <b>Add features:</b></label>
+ <br>
+
+  <input id="checkbox" type="checkbox" name="features" value="autopilot">
+  <label for="checkbox"> Withwot Maya file - $500 </label>
+  <br>
+  <input id="checkbox" type="checkbox" name="features" value="dual_motor">
+  <label for="checkbox"> With Maya file - $1500 </label>
+  <br>
+           
+<br>
+<br>
+
+<label id="textarea">Additional instructions: </label>
+<br>
+<textarea id="textarea" name"instructions" rows="5" cols="59.5">
+</textarea>
+<br>
+  
+<input id="submit" type="submit" value="Place Order" class="submit-button">
+
+  </div>
+  
+</form>
+
+</body>
+
+
+</html>
