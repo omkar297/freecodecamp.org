@@ -1,0 +1,338 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+
+body {
+  font-family: 'nunito';
+  color: white;
+  background-color: black;
+  line-height: 1.4;
+  width: 100%;
+  font-size: 1vw;
+}
+
+#background {
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+.stretch {
+    width:100%;
+    height:100%;
+}
+
+h1 {
+  font-size: 1.4vw;
+  color: white;
+}
+
+h2 {
+  font-size: 2vw;
+  color: white;
+}
+
+h3 {
+  font-size: 3vw;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{ 
+  text-decoration: underline;
+  filter: brightness(150%);
+  filter: drop-shadow(8px 8px 10px white);
+}
+
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 19px;
+  padding: 25px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  opacity: 0.7;
+  
+  z-index:5;
+}
+
+#shop {
+  margin-left: 13%;
+  margin-top: -30%;
+  display: flex; 
+  justify-content: space-between;
+  width: 75%;
+}
+
+
+#portfolio {
+  margin-left: 27%;
+  margin-top: 45%;
+  display: flex; 
+  justify-content: space-between;
+  width: 50%;
+}
+
+
+#phone-logo:hover {
+  filter: brightness(150%);
+  filter: drop-shadow(8px 8px 10px white);
+}
+
+#youtube-logo:hover {
+  filter: brightness(150%);
+  filter: drop-shadow(8px 8px 10px white);
+}
+
+#iVuDang_header_a:hover {
+  filter: brightness(150%);
+  filter: drop-shadow(8px 8px 10px white);
+}
+
+#mystory {
+  margin-left: 0;
+  margin-top: 20%;
+  display: flex; 
+  justify-content: space-between;
+  width: 100%;
+}
+
+#storylayover {
+  background-color: black;
+  width: 100%;
+  opacity: 0.9;
+}
+    
+
+.submit { /* Thanks @yuhomyan for the CSS button effect */
+  display: block; 
+  width: 51.5%;
+  height: 3vw;
+  margin-top: 0vw;
+  margin-bottom: 1vw;
+  font-size: 1.5vw;
+  
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  background: #00aced;
+  box-shadow:  0 0 5px #00aced,  0 0 8px #00aced;
+  padding: 0;
+  border: none;
+  z-index: 2;
+  -webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+
+.submit:hover{
+  background-color: transparent;
+  color: #00aced;
+  box-shadow: 0 5px 3px -3px #00aced, 0 -5px 3px -3px #00aced,
+    0 5px 3px -3px #00aced, 0 -5px 3px -3px #00aced;
+}
+
+  .email {
+    display: block; 
+    width: 50%;
+    height: 2rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+
+  .text {
+    display: block; 
+    width: 50%;
+    height: 2rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+
+
+@media only screen and (max-width: 800px){
+  body {
+  flex-wrap: wrap;
+  }
+  
+  #header-img {
+  width: 30vw;
+  }
+  
+  .nav-link {
+  font-size: 2.5vw; 
+  }
+
+  #video {
+   width: 250px;
+   height: auto; 
+  }
+  
+  
+  .submit {
+    width: 20%;
+    padding: 0.75rem;
+    background: royalblue;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .email {
+    display: block; 
+    width: 18.5%;
+    height: 2rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+
+  .text {
+    display: block; 
+    width: 18.5%;
+    height: 2rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+}
+</style>
+<div id="background">
+    <img src="https://i.imgur.com/7p5X0mu.jpg" class="stretch" alt="" />
+</div>
+
+
+  <header id="header">
+   
+  <nav id="nav-bar">
+
+      <a  class="nav-link" href="#shop"> Shop </a> &nbsp; &nbsp; &nbsp;
+      
+      <a class="nav-link" href="#portfolio"> Portfolio </a> &nbsp; &nbsp; &nbsp;
+      
+      <a class="nav-link" href="#mystory"> My Story </a> &nbsp; &nbsp; 
+
+              
+  </nav>
+ </header>
+
+
+<body>
+
+  <div id="shop-text" style="width: 100%; height: auto; overflow: hidden">
+    
+  <img src="https://i.imgur.com/DA4vuYN.jpg" alt="iVudang Shop" width= "100%";>
+    
+    </div>
+  
+    <section id="shop">
+    <a id="iVuDang_header_a" target="_blank" href="https://codepen.io/iVuDang"> 
+      <h2> Phone Apps </h2> </a>
+      
+    <a id="iVuDang_header_a" target="_blank" href="https://codepen.io/iVuDang"> 
+    <h2> Affiliates </h2></a>
+      
+    <a id="iVuDang_header_a" target="_blank" href="https://codepen.io/iVuDang"> 
+    <h2> Merchandise </h2></a>
+    
+  </section>
+
+  
+
+  
+  
+  <section id="portfolio">
+    
+    <div id="phone-logo" align="center" style="width: 100%; height: auto; overflow: hidden">
+<br>
+<br> 
+<br>
+<br> 
+<br>
+<br> 
+<br>
+<br> 
+   <a id="iVuDang_GitHub_a" target="_blank" href="https://github.com/omkar297"> 
+    <img src="https://i.imgur.com/6nLiGv3.png" 
+    alt="phone-logo" width= "10%";>
+   </a>
+      
+    <h2> Software Projects </h2> 
+   <p> See my projects on github.com/omkar297</p>
+    </div>
+    
+  </section>
+
+  
+
+ <section id="mystory">
+   <div id="storylayover" align="left" style="width: 100%; overflow: hidden">
+ 
+    
+     <iframe 
+             id="video" 
+             align="right"
+             width="560" 
+             height="315" 
+             src="https://youtu.be/Kexh0EmdFOo" 
+             frameborder="0" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+             allowfullscreen>
+     </iframe>
+        <h3> Hi my name is Omkar  </h3>
+       
+     <h2> <i> How I became a CPA / Software Developer? </i> <h2>
+   
+   </div>
+  </section>
+ 
+</body>
+
+<footer>
+<div id="storylayover" align="left" style="width: 100%; overflow: hidden">
+  <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <input 
+             id="text" 
+             type="text" 
+             name="text" 
+             placeholder="Have a question?" 
+             class="text" 
+             required> 
+      </input>
+<br>
+  <input 
+             id="email" 
+             type="email" 
+             name="email" 
+             placeholder="What email would you like to be responded to?" 
+             class="email" 
+             required> 
+      </input>
+  <br>
+      <input 
+             id="submit" 
+             type="submit" 
+             value="Ask Now" 
+             class="submit">
+       </input>
+  </form>
+</div>  
+  
+</footer>

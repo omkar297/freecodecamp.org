@@ -1,0 +1,467 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+
+body {
+  font-family: 'nunito';
+  color: white;
+  background-color: black;
+  line-height: 1.4;
+  width: 100%;
+}
+
+#background {
+  position: absolute; 
+  width: 100%; 
+  height: auto; 
+    
+  left: 300px; 
+  top: 0px; 
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+.background_stretch {
+ width:100%;
+ height:auto;
+ opacity: 0.75;
+}
+
+
+#background_right {
+  position: absolute; 
+  width: 100%; 
+  height: auto; 
+    
+  left: 600px; 
+  top: 885px; 
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+.background_right_stretch {
+ width:75%;
+ height:auto;
+ opacity: 0.75;
+}
+
+#VD_logo {
+position: fixed;
+height: auto;
+min-width: 300px;
+width: 300px;
+  
+top: 10px;
+left: 0px;
+  
+z-index: 4;
+}  
+
+
+.header_text {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-gap: 50px;
+  
+  width: 100%;
+  height: auto;
+  
+  position: absolute;
+  top: 18vw;
+  left: 0vw;
+  z-index: 2;
+}
+
+.header_title {
+grid-column: 1;
+grid-row: 1;
+  
+text-align: right;  
+font-size: 20px;
+color: silver;  
+  
+z-index: 2;
+}  
+
+.header_quote {
+grid-column: 2;
+grid-row: 1;
+  
+font-size: 15px; 
+word-spacing: 2px;
+letter-spacing: 2px;
+z-index: 2;
+}  
+
+
+
+
+#navbar {
+  position: fixed;
+  height: 100%;
+  min-width: 300px;
+  width: 300px;
+  
+  top: 0px;
+  left: 0px;
+
+  color: black;
+  background-color: white;
+  padding: 75px 0px;
+  z-index: 3;
+}
+
+
+#navbar header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+
+#navbar li {
+  list-style: none;
+  padding: 5px 0px;
+  position: relative;
+  width: 100%;
+}
+
+
+#navbar a {
+  color: gray;
+  text-decoration: none;
+}
+
+
+#navbar a:hover{ 
+  color: black;
+  text-decoration: underline;
+}
+
+
+#main-doc {
+  position: absolute;
+  
+  top: 30vw;
+  margin-left: 310px;
+  
+  padding: 20px;
+}
+
+
+
+Section {
+  background: rgb(230, 255, 255, 0.1);
+  padding: 2.5rem 2.5rem;
+  border-radius: 2rem;
+  width: 500px;
+  margin: auto; 
+}
+
+Section header {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 20px;
+}
+
+
+.YouTube_End {
+  border-radius: 1rem;
+  opacity: 0.8; 
+}
+
+
+
+
+/* ==========================================================*/
+@media only screen and (max-width: 800px) 
+{
+  /* For mobile phones: */
+
+  #VD_logo {
+  position: absolute;
+  min-width: 120px;
+  width: 120px;
+  height: auto;
+
+  top: 0px;
+  left: 0px;
+
+  top: 10px;
+  left: 0px;
+
+  z-index: 1;
+  }  
+  
+  #navbar {
+  position: absolute;
+  height: 1300px;
+  min-width: 120px;
+  width: 120px;
+  font-size: 3vw;
+  
+  top: 0px;
+  margin-top: 35px; 
+  left: 0px;
+
+  color: black;
+  background-color: white;
+  padding: 0px 0px;
+  z-index: 1;
+}
+ 
+  #navbar header { 
+    font-size: 4vw; 
+  }
+  
+  
+  .header_text {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-gap: 50px;
+  grid-auto-rows: minmax(100px, auto);
+  
+  width: 100%;
+  height: auto;
+  
+  position: absolute;
+  top: 18vw;
+  left: 120px;
+  z-index: 2;
+ }
+  
+  .header_title {
+    font-size: 2vw;
+  }
+  
+  .header_quote {
+    font-size: 1vw;
+  }
+  
+  #background {
+  position: absolute; 
+  width: 100%; 
+  height: auto; 
+    
+  left: 120px; 
+  top: 0px; 
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+  }
+
+    #main-doc {
+    position: absolute;
+  
+    top: 35vw;
+    margin-left: 120px;
+
+    padding: 20px;
+  }
+  
+  Section {
+    background: rgb(199, 255, 255, 0.1);
+    padding: 2.5rem 2.5rem;
+    border-radius: 2rem;
+    width: 200px;
+    margin: auto; 
+    
+    font-size: 8px;
+  }
+  
+  Section header {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 20px;
+}
+
+  .YouTube_End {
+    border-radius: 1rem;
+    opacity: 0.8; 
+    width: 90%;
+  }
+  
+  #background_right {
+  position: absolute; 
+  width: 100%; 
+  height: auto; 
+    
+  left: 140px; 
+  top: 385px; 
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+  
+}
+<style>
+<div id="background">
+<img class="background_stretch" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcToRQoVSB6-h2eJYHtbcGjPVf4NEDjXq_aUBw&usqp=CAU" alt="Singapore">
+</div> 
+  
+  
+<div id="background_right">
+<img class="background_right_stretch" src="https://i.imgur.com/IDS7lhC.jpg" alt="Subtle_light">
+</div>
+<div class="header_text">
+  <div class="header_title">
+  <h1> 
+    Carry On <br>
+    in <br>
+    Asia
+  </h1>
+  </div>
+
+
+  <div class="header_quote">
+  <h2> 
+    <br>
+    <br>
+    <br>
+    "I travel not to escape life, <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; but for life not to escape me"
+  </h2>
+  </div>
+</div>
+  
+  
+ <nav id="navbar">
+ <header> Omkar Rathod </header>
+  <ul>
+    <li> <a class= "nav-link" href="#India"> India </a> </li>
+    <li> <a class= "nav-link" href="#Japan"> Japan </a> </li>
+    <li> <a class="nav-link" href="#Thailand"> Thailand </a> </li>
+    <li> <a class="nav-link" href="#Indonesia"> Indonesia </a> </li>
+    <li> <a class="nav-link" href="#Taiwan"> Taiwan </a> </li>
+    <li> <a class="nav-link" href="#Singapore"> Singapore </a> </li>
+    <li> <a class="nav-link" href="#About_Me"> About Me </a> </li>
+  </ul>
+</nav>
+
+  
+<main id="main-doc">
+<section class="main-section" id="India">
+<header>India</header>
+  <p>
+    <code> "Hello India!" </code>
+  </p>
+  
+  <p>
+    <ul>
+      <li> Optimal months to visit: March - April. </li>
+      <li> Popular cities: </li>
+            <ul>
+              <li> Mumbia </li>
+              <li> Deli </li>
+              <li> Aurangabad </li>
+            </ul>
+    </ul>
+  </p>
+
+<section class="main-section" id="Japan">
+<header>Japan</header>
+  <p>
+    <code> "Hello Japan!" </code>
+  </p>
+  
+  <p>
+    <ul>
+      <li> Optimal months to visit: March - April. </li>
+      <li> Popular cities: </li>
+            <ul>
+              <li> Tokyo </li>
+              <li> Osaka </li>
+              <li> Kyoto </li>
+            </ul>
+    </ul>
+  </p>
+  
+<br>  
+<section class="main-section" id="Thailand">
+<header>Thailand</header>
+  <p>
+      <code> "Hello Thailand!" </code>
+  </p>
+  
+  <p>
+    <ul>
+      <li> Optimal months to visit: December - January. </li>
+      <li> Popular cities: </li>
+            <ul>
+              <li> Bangkok </li>
+              <li> Pattaya </li>
+              <li> Phuket </li>
+            </ul>
+    </ul>
+  </p>
+  
+  
+<br>   
+<section class="main-section" id="Indonesia">
+<header>Indonesia</header>
+  <p>
+      <code> "Hello Indonesia!" </code>
+  </p>
+
+  <p>
+    <ul>
+      <li> Optimal months to visit: June - August. </li>
+      <li> Popular cities: </li>
+            <ul>
+              <li> Bali </li>
+              <li> Ubud </li>
+              <li> Jakarta </li>
+            </ul>
+    </ul>
+  </p>
+  
+  
+<br>   
+<section class="main-section" id="Taiwan">
+<header>Taiwan</header>
+  <p>
+      <code> "Hello Taiwan!" </code>
+  </p>
+  
+  <p>
+    <ul>
+      <li> Optimal months to visit: December - January. </li>
+      <li> Popular cities: </li>
+            <ul>
+              <li> Taipei </li>
+              <li> Kaohsiung </li>
+            </ul>
+    </ul>
+  </p>
+ 
+
+<br>   
+<section class="main-section" id="Singapore">
+<header>Singapore</header>
+  <p>
+      <code> "Hello Singapore!" </code>
+  </p>
+
+  <p>
+    <ul>
+      <li> Optimal months to visit: December - January. </li>
+      <li> Popular cities: </li>
+            <ul>
+              <li> Singapore </li>
+            </ul>
+    </ul>
+  </p>
+  
+<section class="main-section" id="About_Me">
+<header>About Me</header>  
+
+<br>
+ <a id="YouTube_iVuDang" target="_blank" href="https://www.youtube.com/channel/UCJhbuJ4Ls9DpKCYl1J03bMg?view_as=subscriber">
+                                                                             
+<img src="https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg" alt="My_YouTube_channel"
+     id="YouTube_iVuDang" class="YouTube_End">
+ </a>
+                                             
+<a id="YouTube_iVuDang" target="_blank" href="https://www.youtube.com/channel/UCJhbuJ4Ls9DpKCYl1J03bMg?view_as=subscribe"> 
+</main>
+</html>
