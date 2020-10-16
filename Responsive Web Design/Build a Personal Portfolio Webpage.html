@@ -1,0 +1,513 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+
+body {
+  font-family: 'nunito';
+  color: white;
+  background-color: black;
+  line-height: 1.4;
+  width: 100%;
+}
+
+/* START NAV BAR */
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  
+  height: 19px;
+  padding: 25px 0px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: black;
+  opacity: 0.7;
+  
+  z-index: 5;
+}
+
+header a{
+  margin-right: 2rem;
+  color: gray;
+  
+  text-decoration: none;
+  z-index: 5;
+}
+
+header a:hover{
+  margin-right: 2rem;
+  color: white;
+  
+  text-decoration: underline;
+  z-index: 5;
+}
+
+header h3{
+  margin-right: 2rem;
+  color: white;
+  
+  text-decoration: none;
+}
+/* END NAV BAR */
+
+
+/* START BACKGROUND IMAGES */
+.background_grid {
+  display: grid;
+  
+  justify-content: center;
+  align-items: center;
+  
+  grid-template-columns: 100%;
+  grid-gap: 0px;
+  
+  width: 100%;
+  height: auto;
+  
+  z-index: -2;
+}
+
+#background1 {
+  grid-column: 1;
+  grid-row: 1;
+  
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+#background2 {
+  grid-column: 1;
+  grid-row: 2;
+
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+#background3 {
+  grid-column: 1;
+  grid-row: 3;
+  
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+#background4 {
+  grid-column: 1;
+  grid-row: 4;
+  
+  z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+.background_stretch {
+ width:100%;
+ height:auto;
+}
+/* END BACKGROUND IMAGES */
+
+
+
+/* START WELCOME-SECTION */
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  
+  position: absolute;
+  top: 10vw;
+  left: 0vw;
+  z-index: 2;
+}
+
+#welcome-section h1{
+  text-align: left;  
+  font-size: 3vw;
+  color: silver;
+  
+  position: absolute;
+  top: 5vw;
+  left: 7vw;
+}
+
+#welcome-section h2{
+  text-align: left;  
+  font-size: 4vw;
+  color: white;
+  
+  position: absolute;
+  top: 10vw;
+  left: 7vw;
+  
+  border-bottom: 1px solid gray; 
+  padding-bottom: 3px;
+  border-bottom-width: 1px; 
+  
+  word-spacing: 2px;
+  letter-spacing: 5px;
+}
+
+/* END WELCOME-SECTION */
+
+
+
+/* START PROJECT-SECTION */
+#projects {
+  width: 100%;
+  height: auto;
+  
+  position: absolute;
+  top: 46vw;
+  left: 0vw;
+  z-index: 2;
+}
+
+#projects h3{
+  text-align: left;  
+  font-size: 3vw;
+  color: white;
+  
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  
+  border-bottom: 1px solid #40e0d0; 
+  border-bottom-width: 1px; 
+  
+  word-spacing: 2px;
+  letter-spacing: 5px;
+}
+
+#projectsbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  top: 44vw;
+  left: 2vw;
+  
+  width: 100%;
+  height: auto;
+
+  font-size: 3vw;
+  word-spacing: 2px;
+  letter-spacing: 5px;
+}
+
+#projectsbar a{
+  margin-right: 11vw;
+  margin-left: 11vw;
+  color: silver;
+  
+  text-decoration: none;
+  z-index: 2;
+}
+
+#projectsbar a:hover{
+  margin-right: 11vw;
+  margin-left: 11vw;
+  color: #40e0d0;
+  
+  font-weight: bold;
+  z-index: 2;
+}
+/* END PROJECT-SECTION */
+
+
+
+/* START SKILL-SECTION */
+#skills {
+  width: 100%;
+  height: auto;
+  
+  position: absolute;
+  top: 46vw;
+  left: 0vw;
+  z-index: 2;
+}
+
+#skills h3{
+  text-align: left;  
+  font-size: 3vw;
+  color: white;
+  
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  
+  border-bottom: 1px solid gray; 
+  border-bottom-width: 1px; 
+  
+  word-spacing: 2px;
+  letter-spacing: 5px;
+}
+/* END SKILL-SECTION */
+
+
+/* START CONTACT-SECTION */
+
+#contact {
+  width: 75%;
+  height: auto;
+  
+  position: absolute;
+  top: 98vw;
+  left: 22vw;
+  z-index: 2;
+}
+
+
+#contact h3{
+  text-align: left;  
+  font-size: 3vw;
+  color: white;
+  
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  
+  border-bottom: 1px solid gray; 
+  border-bottom-width: 1px; 
+  
+  word-spacing: 2px;
+  letter-spacing: 5px;
+}
+
+
+#contact h6 {
+  text-align: left;  
+  font-size: 1.5vw;
+  color: silver;
+  flex-wrap: wrap;
+  
+  position: absolute;
+  top: 10vw;
+  left: 3vw;
+  
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  
+  border-bottom: 1px solid dimgray; 
+  padding-bottom: 5vw;
+}
+
+#iVuDang_LinkedIn {
+  width: 5vw;
+  text-align: left;  
+  
+  position: absolute;
+  top: 43vw;
+  left: 3vw;
+  
+  opacity: 0.85;
+  z-index; 3;
+}
+
+#iVuDang_Instagram {
+  width: 5vw;
+  text-align: left;  
+  
+  position: absolute;
+  top: 43vw;
+  left: 9vw;
+  
+  opacity: 0.85;
+  z-index; 3;
+}
+
+#iVuDang_CodePen {
+  width: 5vw;
+  text-align: left;  
+  
+  position: absolute;
+  top: 43vw;
+  left: 15vw;
+  
+  opacity: 0.85;
+  z-index; 3;
+}
+
+#iVuDang_GitHub {
+  width: 5vw;
+  text-align: left;  
+  
+  position: absolute;
+  top: 43vw;
+  left: 21vw;
+  
+  opacity: 0.85;
+  z-index; 3;
+}
+
+#iVuDang_YouTube {
+  width: 5vw;
+  text-align: left;  
+  
+  position: absolute;
+  top: 43vw;
+  left: 27vw;
+  
+  opacity: 0.85;
+  z-index; 3;
+}
+
+img:hover {
+  filter: brightness(150%);
+}
+/* END CONTACT-SECTION */
+
+
+
+
+/* START FOR MOBILE PHONES */
+@media only screen and (max-width: 800px) 
+{
+    header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+
+    height: 2vw;
+    padding: 25px 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: black;
+    opacity: 0.7;
+
+    z-index: 5;
+    font-size: 2vw;
+  }
+  
+  #VD_logo {
+  width: 12vw;
+  }
+
+#welcome-section h2{
+  font-size: 3.5vw;
+}
+
+
+  /* END FOR MOBILE PHONES */
+</style>
+<!-- START BACKGROUND IMAGES -->
+<div class="background_grid">
+  
+  <div id="background1">
+  <img class="background_stretch" src="https://i.imgur.com/6wlVoxs.png" alt="welcome_background_image">
+  </div> 
+
+  <div id="background2">
+  <img class="background_stretch" src="https://cdn.cjr.org/wp-content/uploads/2019/07/AdobeStock_100000042-e1563305717660-686x371.jpeg" alt="portfolio_background_image">
+  </div> 
+  
+  <div id="background3">
+  <img class="background_stretch" src="https://i.imgur.com/IgdIi8H.png" alt="skills_background_image">
+  </div> 
+  
+  <div id="background4">
+  <img class="background_stretch" src="https://i.pinimg.com/originals/6f/d6/8c/6fd68ced202b643053e9f281de52a016.jpg" alt="contact_background_image">
+  </div> 
+ </div> 
+<!-- END BACKGROUND IMAGES -->
+  
+  
+<!-- START NAV BAR -->
+<header id="header">
+<nav id="navbar">
+  
+  <h3>  iVuDang 
+  &nbsp; &nbsp; &nbsp;
+   
+  <a class="nav-link" href="#welcome-section"> Hello </a> 
+  <a class="nav-link" href="#projects"> Portfolio </a> 
+  <a class="nav-link" href="#skills"> Skills </a> 
+  <a class="nav-link" href="#contact"> Contact </a> 
+  </h3> 
+              
+  </nav>
+ </header>
+<!-- END NAV BAR -->
+  
+  
+<!-- START WELCOME SECTION -->
+<section id="welcome-section">
+ 
+  <h1>Omkar Rathod</h1>
+  <h2>Software Developer</h2>
+
+</section>
+<!-- END WELCOME SECTION -->
+  
+  
+<!-- START PROJECTS SECTION -->
+<section id="projects">
+<h3>Portfolio</h3>
+
+<div class="projects-grid">
+  <nav id="projectsbar">
+
+   <a id="YouTube_iVuDang" class="project-tile" target="_blank" href="https://www.youtube.com/channel/UCJhbuJ4Ls9DpKCYl1J03bMg?view_as=subscriber">
+       YouTube
+   </a>
+
+   <a id="profile-link" class="project-tile" target="_blank" href="https://github.com/omkar297">                           
+       GitHub
+   </a>
+
+   <a id="CodePen_iVuDang" class="project-tile" target="_blank" href="https://codepen.io/Omkar297">
+       CodePen
+  </a>
+  </nav>
+</div> 
+<!-- END PROJECTS SECTION -->
+  
+  
+  
+<!-- START PROJECTS SECTION -->
+<section id="skills">
+<h3>My Skills</h3>
+</section>
+<!-- END PROJECTS SECTION -->
+ 
+  
+  
+<!-- START CONTACT SECTION -->
+<section id="contact">
+
+  <h3>About Me</h3>
+  
+  <h6> 
+   <li>Game Developer. </li>
+   <li> UI/UX Designer fo game.</li>
+  <li> Digital Nomad of sorts who loves to travel and capture our amazing world on film.</li>
+  </h6>
+  
+  
+  
+ <a id="iVuDang_LinkedIn_a" target="_blank" href="https://www.linkedin.com/in/omkar-rathod-41a3591b8">                                                                    
+  <img src="https://i.imgur.com/ydhzwyH.png" alt="iVuDang_LinkedIn_img"
+     id="iVuDang_LinkedIn" class="social_media">
+ </a>
+  
+  
+  <a id="iVuDang_CodePen_a" target="_blank" href="https://codepen.io/Omkar297"> 
+  <img src="https://i.imgur.com/b4sp5N2.png" alt="iVuDang_CodePen_img"
+     id="iVuDang_CodePen" class="social_media">  
+  </a> 
+
+  <a id="iVuDang_GitHub_a" target="_blank" href="https://github.com/omkar297"> 
+  <img src="https://i.imgur.com/ENayx3n.png" alt="iVuDang_GitHub_img"
+     id="iVuDang_GitHub" class="social_media">  
+  </a> 
+  
+  <a id="iVuDang_YouTube_a" target="_blank" href="https://www.youtube.com/channel/UCJhbuJ4Ls9DpKCYl1J03bMg?view_as=subscriber"> 
+  <img src="https://i.imgur.com/L9vlNxN.png" alt="iVuDang_YouTube_img"
+     id="iVuDang_YouTube" class="social_media">  
+  </a> 
+  
+</section>
+<!-- END CONTACT SECTION -->
